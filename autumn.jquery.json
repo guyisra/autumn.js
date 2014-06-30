@@ -1,0 +1,28 @@
+{
+  "name": "autumn",
+  "title": "Autumn - leaflet with jQuery",
+  "description": "leaflet with jQuery",
+  "version": "0.0.1",
+  "homepage": "",
+  "author": {
+    "name": "Guy Israeli",
+    "url": "https://github.com/guyisra"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": "",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "~1.11"
+  },
+  "keywords": [
+    "jquery-plugin"
+  ]
+}
