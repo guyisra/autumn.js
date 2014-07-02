@@ -8,7 +8,7 @@
           container: "map",
           scrollWheenZoom: false,
           center: [51.1788, -1.8262], //stonehenge, that's why
-          maxZoom: 18,
+          maxZoom: 10,
           tiles_url: "http://{s}.tiles.mapbox.com/v3/guyisra.ibee8f32/{z}/{x}/{y}.png",
           attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>'
         },
