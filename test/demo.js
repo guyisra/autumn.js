@@ -1,13 +1,12 @@
 $(document).ready(function(){
 
 
-$("#map").autumn({center: [1,1], maxZoom: 18});
+$("#map").autumn({center: [1,1], maxZoom: 18, tiles_url: "http://{s}.tiles.mapbox.com/v3/guyisra.ibee8f32/{z}/{x}/{y}.png"});
 
 
 $("#submit").on("click", function(){
-  debugger;
   var marker = JSON.parse($("#marker").val());
-  $("#map").autumn('addMarker', {markers: marker});
+  $("#map").autumn('addMarker', {marker: marker});
 });
 
 $("#remove").on("click", function(){
@@ -16,13 +15,14 @@ $("#remove").on("click", function(){
 
 $("#random").on("click", function(){
   var markers = [];
-  var count = Math.floor(randomCoor(2, 100));
+  var count = Math.floor(randomCoor(2, 10));
   for ( var i = 0; i < count; i++) {
-    var coor = [randomCoor(-90, 90), randomCoor(-90,90)];
+    var coor = [randomCoor(-30, 30), randomCoor(-20,20)];
     markers.push(coor);
   }
   $("#map").autumn("deleteMarkers");
-  $("#map").autumn('addMarker', {markers: markers});
+  $("#map").autumn('addMarkers', {markers: markers});
+  $("#map").autumn('fitMarkers');
 });
 
 function randomCoor(min,max){
