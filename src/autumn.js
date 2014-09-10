@@ -17,6 +17,7 @@
              scrollWheelZoom: false,
              doubleClickZoom: false,
              boxZoom: true,
+             tap: true,
              tapTolerance: 15,
              trackResize: true,
              worldCopyJump: false,
