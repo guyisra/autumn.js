@@ -1,6 +1,9 @@
 /*! autumn - v0.0.4.2 - 2014-09-17
 * https://github.com/guyisra/autumn
 * Copyright (c) 2014 Guy Israeli; Licensed MIT */
+/*! autumn - v0.0.4.2 - 2014-09-17
+* https://github.com/guyisra/autumn
+* Copyright (c) 2014 Guy Israeli; Licensed MIT */
 
 // the semi-colon before function invocation is a safety net against concatenated
 // scripts and/or other plugins which may not be closed properly.
@@ -112,8 +115,11 @@
             return this;
           case 'addCircle':
             var circle = L.circle(options.coordinates, options.radius);
-            a._map.removeLayer(a.locationLayer);
-            a.locationLayer = new L.layerGroup();
+            if (a._map.hasLayer(a.locationLayer)){
+              a._map.removeLayer(a.locationLayer);
+              a.locationLayer = new L.layerGroup();
+            }
+
             circle.addTo(a.locationLayer);
             a.locationLayer.addTo(a._map);
       }
