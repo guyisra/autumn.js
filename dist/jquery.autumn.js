@@ -1,7 +1,4 @@
-/*! autumn - v0.0.4.2 - 2014-09-17
-* https://github.com/guyisra/autumn
-* Copyright (c) 2014 Guy Israeli; Licensed MIT */
-/*! autumn - v0.0.4.2 - 2014-09-17
+/*! autumn - v0.0.4.3 - 2014-09-17
 * https://github.com/guyisra/autumn
 * Copyright (c) 2014 Guy Israeli; Licensed MIT */
 

@@ -1,6 +1,3 @@
-/*! autumn - v0.0.4.2 - 2014-09-17
-* https://github.com/guyisra/autumn
-* Copyright (c) 2014 Guy Israeli; Licensed MIT */
 
 // the semi-colon before function invocation is a safety net against concatenated
 // scripts and/or other plugins which may not be closed properly.
