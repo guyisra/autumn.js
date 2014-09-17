@@ -42,6 +42,7 @@
             var map = L.map(this.element.id,this.options).setView(this.options.center, 17);
             this._map = map;
             this.layer =  new L.featureGroup(); // TODO this better...
+            this.locationLayer = new L.layerGroup();
             L.tileLayer(this.options.tiles_url, { attribution: this.options.attribution, maxZoom: this.options.maxZoom
                                                       }).addTo(map);
         },
@@ -106,6 +107,12 @@
           case 'fitMarkers':
             a._map.fitBounds(a.layer.getBounds(), {maxZoom: 16});
             return this;
+          case 'addCircle':
+            var circle = L.circle(options.coordinates, options.radius);
+            a._map.removeLayer(a.locationLayer);
+            a.locationLayer = new L.layerGroup();
+            circle.addTo(a.locationLayer);
+            a.locationLayer.addTo(a._map);
       }
 
     };

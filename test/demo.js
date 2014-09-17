@@ -13,6 +13,10 @@ $("#remove").on("click", function(){
   $("#map").autumn("deleteMarkers");
 });
 
+$("#circle").on("click", function(){
+  $("#map").autumn('addCircle', {coordinates: [randomCoor(-30, 30), randomCoor(-20,20)], radius: Math.random()*20 })
+});
+
 $("#random").on("click", function(){
   var markers = [];
   var count = Math.floor(randomCoor(2, 10));
